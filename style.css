@@ -1,0 +1,445 @@
+html,body {
+  margin: 0 auto;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Georgia , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , serif;
+  font-size: 16px;
+}
+
+.br:before {
+  content: "\A" ;
+  white-space: pre ;
+}
+
+/* First Stage */
+.first {
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.first div {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 900px;
+}
+
+.first h1 {
+  color: #fff;
+}
+
+.first p,li {
+  color: #ccc;
+  font-size: 1.8rem;
+}
+
+.first ul {
+  list-style: none;
+}
+
+.first li {
+  text-align: left;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+  padding-left: 1em; /*1em（1文字）分、右に動かす*/
+  text-indent: -1em; /*最初の行だけ1em（1文字）分、左に動かす*/
+}
+
+.first h1,i,a#false {
+  font-style: italic;
+}
+
+
+.first a {
+  color: #FF9F16;
+  font-size: 1.8rem;
+}
+
+.first span {
+  will-change: opacity;
+  opacity: 0;
+}
+
+.first span.animate {
+  opacity: 1;
+  -webkit-filter: blur(0) !important;
+}
+
+
+/* Second Stage */
+.second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d212b;
+}
+
+.second div {
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 30vw;
+  color: #fff;
+  background-color: rgba(21,24,35,0.8);
+  border-radius: 50px/50px;
+}
+
+.second div:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+}
+/*
+  animation: animateGlow 10s ease infinite;
+
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
+
+.second h1 {
+  font-size: 2rem;
+}
+
+.second a {
+  text-decoration: none;
+  cursor: text;
+  font-size: 1.0rem;
+  color: inherit;
+}
+.second strong {
+  font-size: 1.2rem;
+  color: #FF9F16;
+}
+
+/* Third Stage */
+.third {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d212b;
+}
+
+.third div.main {
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 30vw;
+  color: #fff;
+  background-color: rgba(21,24,35,0.8);
+  border-radius: 50px/50px;
+}
+
+.third div.main:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+}
+
+.third h1 {
+  font-size: 2rem;
+}
+
+.third p {
+  font-size: 1.0rem;
+}
+.third p > span{
+  font-size: 1.0rem;
+}
+
+.third #wrap {
+  position: relative;
+}
+
+.third #lock {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  background-image: url('wrap.png');
+  background-repeat: repeat;
+  border-radius: 30px/30px;
+}
+
+.third a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.0rem;
+  color: #FF9F16;
+  padding: 0.5em 2em;
+}
+
+/* Fourth Stage */
+.fourth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d212b;
+}
+
+.fourth img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+}
+
+.fourth div {
+  position: absolute;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 30vw;
+  color: #fff;
+  background: rgba(21,24,35,0.8);
+  border-radius: 150px 50px 150px 50px / 150px 50px 150px 50px;
+}
+
+.fourth h1 {
+  font-size: 2rem;
+}
+.fourth p {
+  font-size: 1.0rem;
+}
+
+/* Fifth Stage */
+.fifth {
+  background-color: rgb(200,200,200);
+  margin: 0px;
+  overflow: hidden;
+}
+/* Sixth Stage */
+
+.sixth ul{
+  list-style: none;
+  padding-left: 0;
+}
+.sixth nav li:last-child{
+  margin-top: 2em;
+}
+/*
+* jQuery Box Lid Plugin v0.1
+* https://github.com/jimjh/box-lid
+*
+* Copyright 2013 Jiunn Haur Lim
+* Released under the MIT License
+*/
+
+.sixth .box-lid{
+  -webkit-perspective:2000px;
+  -moz-perspective:2000px;
+  -ms-perspective:2000px;
+  -o-perspective:2000px;
+  perspective:2000px;
+  -webkit-perspective-origin:50% 50%;
+  -moz-perspective-origin:50% 50%;
+  -ms-perspective-origin:50% 50%;
+  -o-perspective-origin:50% 50%;
+  perspective-origin:50% 50%;
+  background:#333;
+}
+.sixth .box-lid .box-lid-content{
+  -webkit-transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  -moz-transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  -o-transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  background:#fff;
+  cursor: wait;
+  height: 100vh;
+}
+.sixth .box-lid-menu{
+  -webkit-transition:all 250ms cubic-bezier(0.75, 0, 0.175, 1);
+  -moz-transition:all 250ms cubic-bezier(0.75, 0, 0.175, 1);
+  -o-transition:all 250ms cubic-bezier(0.75, 0, 0.175, 1);
+  transition:all 250ms cubic-bezier(0.75, 0, 0.175, 1);
+  width:40px;
+  position:fixed;
+  height:100%;
+  top:0;
+  right:0;
+  z-index:2;
+}
+.sixth .box-lid-menu nav{
+  -webkit-transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  -moz-transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  -o-transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  transition:all 500ms cubic-bezier(0.75, 0, 0.175, 1);
+  display:block;
+  height:100%;
+  width:350px;
+  position:absolute;
+  top:0;
+  right:-382px;
+  color:#fff;
+  margin-top:3em;
+  margin-right: 2em;
+  padding-left:1em;
+}
+.sixth .box-lid-menu nav a{
+  -webkit-transition:
+  all 100ms ease-in;
+  -moz-transition:all 100ms ease-in;
+  -o-transition:all 100ms ease-in;
+  transition:all 100ms ease-in;
+  text-decoration:none;
+  color:#fff;
+  display:block;
+}
+.sixth .box-lid-menu nav a:hover{
+  padding-left:.75em;
+  background:#000;
+}
+.sixth.box-lid-open .box-lid-content{
+  -webkit-transform:rotateY(30deg) translateX(-350px);
+  -moz-transform:rotateY(30deg) translateX(-350px);
+  -ms-transform:rotateY(30deg) translateX(-350px);
+  -o-transform:rotateY(30deg) translateX(-350px);
+  transform:rotateY(30deg) translateX(-350px);
+}
+
+.sixth.box-lid-open .box-lid-menu nav{
+  right: 0;
+}
+
+
+
+/* Final Stage */
+.final {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: courier-new, courier, monospace;
+  font-feature-settings: "liga" 0;
+  background-color: #000;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
+.final p {
+  color: #aaa;
+  margin: 0.3em 0;
+}
+.final p:first-child {
+  margin-top: 1em;
+}
+.final p:last-child {
+  margin-bottom: 1em;
+}
+.final pre {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: courier-new, courier, monospace;
+  font-feature-settings: "liga" 0;
+  font-size: 16px;
+  color: #aaa;
+  margin: 0.3em 0;
+}
+
+.final p.command {
+  color: #fff;
+}
+.final kbd {
+  font-family: courier-new, courier, monospace;
+}
+
+.final span {
+  color: #000;
+  background-color: #fff;
+  animation: blink 1s step-end infinite;
+  -webkit-animation: blink 1s step-end infinite;
+}
+
+.final a {
+  color: #FF9F16;
+}
+
+@keyframes blink {
+  50% { 
+    background-color: #000;
+    color: #fff;
+  }
+}
+@-webkit-keyframes blink {
+  50% { 
+    background-color: #000; 
+    color: #fff;
+  }
+}
+/* Last Page*/
+.last {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.last div {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 900px;
+}
+.last span {
+  will-change: opacity;
+  opacity: 0;
+}
+
+.last span.animate {
+  opacity: 1;
+  -webkit-filter: blur(0) !important;
+}
